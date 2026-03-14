@@ -43,7 +43,7 @@ async def back_from_sending_name(
 
     if user_row[1]:
         await callback.message.edit_text(
-            text=f"Добро пожаловать, {callback.message.text.strip()}!",
+            text=f"Добро пожаловать, {user_row[1]}!",
             reply_markup=InlineKeyboardMarkup(
                 inline_keyboard=[
                     [
