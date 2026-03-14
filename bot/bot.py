@@ -7,6 +7,7 @@ import psycopg_pool
 
 from bot.handling.handlers.start import start_router
 from bot.handling.handlers.user import user_router
+from bot.handling.handlers.admin import admin_router
 
 # from app.bot.handlers.admin import admin_router
 from bot.handling.middlewares import DBConnMiddleware, UserRowMiddleware, RoleMiddleware
@@ -37,7 +38,7 @@ async def main(config: Config) -> None:
 
     # Регистрация роутеров
     logger.info("Регистрация роутеров...")
-    dp.include_routers(start_router, user_router)
+    dp.include_routers(start_router, admin_router, user_router)
     # Регистрация миддлварей
     logger.info("Регистрация миддлварей...")
     dp.update.outer_middleware(DBConnMiddleware())

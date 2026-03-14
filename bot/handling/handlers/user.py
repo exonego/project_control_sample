@@ -12,8 +12,7 @@ from aiogram.filters import StateFilter, ChatMemberUpdatedFilter, KICKED
 from aiogram.fsm.context import FSMContext
 from psycopg import AsyncConnection
 
-from bot.enums import Role
-from bot.handling.states import ChangeNameSG, MailingSG
+from bot.handling.states import ChangeNameSG
 from database import requests
 
 logger = logging.getLogger(__name__)
