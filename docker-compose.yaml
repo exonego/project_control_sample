@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:17-alpine
-    container_name: project_simple_bot-postgres
+    container_name: project_control_sample-postgres
     env_file:
       - .env
     environment:
@@ -30,7 +30,7 @@ services:
 
   pgadmin:
     image: dpage/pgadmin4
-    container_name: project_simple_bot-pgadmin
+    container_name: project_control_sample-pgadmin
     env_file:
       - .env
     environment:
